@@ -43,7 +43,7 @@ const Cover: FC<CoverProps> = (props) => {
           The Wedding of
         </p>
         <h3 className="font-nunito text-white font-normal text-3xl font-alegreya mb-4">
-          Ari & Juli
+          {props.name}
         </h3>
         <p className="text-white font-light text-xs text-center leading-6 font-montserrat uppercase">
           {props.place} | {props.date}
