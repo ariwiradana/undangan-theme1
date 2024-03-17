@@ -33,7 +33,7 @@ const Cover: FC<CoverProps> = (props) => {
               height="0"
               sizes="100vh"
               className="w-full h-screen object-cover"
-              alt="cover-image"
+              alt={`cover-image-${image}`}
             />
           </SwiperSlide>
         ))}

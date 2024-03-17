@@ -5,7 +5,7 @@ import CoverOutside from "@/components/cover.outside";
 import useCover from "@/hooks/useCover";
 import Head from "next/head";
 
-const images: string[] = ["image 1", "image 2", "image 3"];
+const images: string[] = ["image (1)", "image (2)", "image (3)"];
 
 const Home = () => {
   const { open, setOpen, zIndex } = useCover();
