@@ -2,26 +2,15 @@ import Container from "@/components/element/container";
 import Cover from "@/components/cover";
 import React, { useEffect, useState } from "react";
 import CoverOutside from "@/components/cover.outside";
+import useCover from "@/hooks/useCover";
 
 const images: string[] = ["rGHO4XSF0Qk", "LlyIkGgfwIM", "EHAn0csi6-E"];
 
 const Home = () => {
-  const [open, setOpen] = useState<boolean>(false);
-  const [zIndex, setZIndex] = useState<number>(100);
-
-  useEffect(() => {
-    if (!open) {
-      document.body.style.overflow = "hidden";
-      setZIndex(100);
-    } else {
-      document.body.style.overflow = "visible";
-      const timer = setTimeout(() => setZIndex(-1), 200);
-      return () => clearTimeout(timer);
-    }
-    return () => {
-      document.body.style.overflow = "visible";
-    };
-  }, [open]);
+  const { open, setOpen, zIndex } = useCover();
+  const name: string = process.env.NEXT_PUBLIC_NAME || "";
+  const date: string = process.env.NEXT_PUBLIC_DATE || "";
+  const place: string = process.env.NEXT_PUBLIC_PLACE || "";
 
   return (
     <Container>
@@ -30,17 +19,12 @@ const Home = () => {
           className="fixed top-0 transition-all ease-in-out duration-700"
           style={{ zIndex, opacity: open ? 0 : 1 }}
         >
-          <CoverOutside setOpen={setOpen} image="rGHO4XSF0Qk" />
+          <CoverOutside name={name} setOpen={setOpen} image="rGHO4XSF0Qk" />
         </div>
-        <Cover
-          images={images}
-          name="Ari & Juli"
-          date="10 September 2024"
-          place="Payangan, Gianyar"
-        />
-        <div className="h-[300rem] bg-yellow-500 w-full"></div>
-        <div className="h-[300rem] bg-red-500 w-full"></div>
-        <div className="h-[300rem] bg-green-500 w-full"></div>
+        <Cover images={images} name={name} date={date} place={place} />
+        <div className="h-screen bg-yellow-500 w-full"></div>
+        <div className="h-screen bg-red-500 w-full"></div>
+        <div className="h-screen bg-green-500 w-full"></div>
       </div>
     </Container>
   );
