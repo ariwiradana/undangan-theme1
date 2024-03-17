@@ -28,7 +28,7 @@ const Cover: FC<CoverProps> = (props) => {
         {props.images.map((image) => (
           <SwiperSlide key={`cover-image-${image}`}>
             <Image
-              src={`https://source.unsplash.com/${image}/480x720`}
+              src={`/images/${image}.jpg`}
               width="0"
               height="0"
               sizes="100vh"
@@ -38,11 +38,11 @@ const Cover: FC<CoverProps> = (props) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute inset-0 bg-black bg-opacity-40 z-10 flex justify-end items-center flex-col p-6">
-        <p className="text-white font-light text-sm text-center leading-6 font-montserrat italic">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/[.8] z-10 flex justify-end items-center flex-col p-6">
+        <p className="text-white font-light text-xs lg:text-sm text-center leading-6 font-montserrat">
           The Wedding of
         </p>
-        <h3 className="font-nunito text-white font-normal text-3xl font-alegreya mb-4">
+        <h3 className="font-nunito text-white font-normal text-3xl font-alegreya mb-4 text-center">
           {props.name}
         </h3>
         <p className="text-white font-light text-xs text-center leading-6 font-montserrat uppercase">

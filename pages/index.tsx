@@ -5,7 +5,7 @@ import CoverOutside from "@/components/cover.outside";
 import useCover from "@/hooks/useCover";
 import Head from "next/head";
 
-const images: string[] = ["rGHO4XSF0Qk", "LlyIkGgfwIM", "EHAn0csi6-E"];
+const images: string[] = ["image 1", "image 2", "image 3"];
 
 const Home = () => {
   const { open, setOpen, zIndex } = useCover();
@@ -18,20 +18,23 @@ const Home = () => {
       <Head>
         <title>{name} | Undangan Pernikahan</title>
       </Head>
-      <Container>
-        <div className="lg:w-1/3 w-full z-10 relative">
-          <div
-            className="fixed top-0 transition-all ease-in-out duration-700"
-            style={{ zIndex, opacity: open ? 0 : 1 }}
-          >
-            <CoverOutside name={name} setOpen={setOpen} image="rGHO4XSF0Qk" />
+      <div className="relative">
+        <Container image={images[3]} />
+        <div className="flex lg:justify-end justify-center">
+          <div className="lg:w-[33%] w-full">
+            <div
+              className="fixed top-0 transition-all ease-in-out duration-700"
+              style={{ zIndex, opacity: open ? 0 : 1 }}
+            >
+              <CoverOutside name={name} setOpen={setOpen} image={images[0]} />
+            </div>
+            <Cover images={images} name={name} date={date} place={place} />
+            <div className="h-screen bg-yellow-500 w-full"></div>
+            <div className="h-screen bg-red-500 w-full"></div>
+            <div className="h-screen bg-green-500 w-full"></div>
           </div>
-          <Cover images={images} name={name} date={date} place={place} />
-          <div className="h-screen bg-yellow-500 w-full"></div>
-          <div className="h-screen bg-red-500 w-full"></div>
-          <div className="h-screen bg-green-500 w-full"></div>
         </div>
-      </Container>
+      </div>
     </>
   );
 };

@@ -26,7 +26,7 @@ const config: Config = {
         montserrat: ["Montserrat", "sans-serif"],
       },
       backgroundImage: {
-        "hero-image": "url('https://source.unsplash.com/7XqL_DVuBMw')",
+        "hero-image": "url('/images/image 3.jpg')",
       },
     },
   },
