@@ -15,7 +15,7 @@ interface CoverProps {
 
 const Cover: FC<CoverProps> = (props) => {
   return (
-    <div className="h-screen w-full bg-gray-300 relative select-none">
+    <div className="h-dvh w-full bg-gray-300 relative select-none">
       <Swiper
         zoom={{ toggle: true }}
         loop
@@ -32,7 +32,7 @@ const Cover: FC<CoverProps> = (props) => {
               width="0"
               height="0"
               sizes="100vh"
-              className="w-full h-screen object-cover"
+              className="w-full h-dvh object-cover"
               alt={`cover-image-${image}`}
             />
           </SwiperSlide>

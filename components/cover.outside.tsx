@@ -10,13 +10,13 @@ interface CoverOutsideProps {
 }
 const CoverOutside: FC<CoverOutsideProps> = (props) => {
   return (
-    <div className="h-screen w-full bg-gray-300 relative select-none">
+    <div className="h-dvh w-full bg-gray-300 relative select-none">
       <Image
         src={`/images/${props.image}.jpg`}
         width="0"
         height="0"
         sizes="100vh"
-        className="w-full h-screen object-cover"
+        className="w-full h-dvh object-cover"
         alt="cover-image"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/[.8] z-10 flex justify-end items-center flex-col p-6">
