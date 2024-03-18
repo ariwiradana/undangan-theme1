@@ -10,7 +10,7 @@ interface CoverOutsideProps {
 }
 const CoverOutside: FC<CoverOutsideProps> = (props) => {
   return (
-    <div className="h-dvh w-full bg-gray-300 relative select-none">
+    <div className="h-dvh w-full bg-dark relative select-none">
       <Image
         src={`/images/${props.image}.jpg`}
         width="0"

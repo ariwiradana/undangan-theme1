@@ -3,6 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'Mangolaine';
+  src: url('/fonts/Mangolaine.ttf');
+}
+
+@font-face {
+  font-family: 'DreamAvenue';
+  src: url('/fonts/Dream-Avenue.ttf');
+}
+
+
 @keyframes zoom {
   from {
     transform: scale(1);

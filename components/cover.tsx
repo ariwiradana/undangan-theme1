@@ -15,7 +15,7 @@ interface CoverProps {
 
 const Cover: FC<CoverProps> = (props) => {
   return (
-    <div className="h-dvh w-full bg-gray-300 relative select-none">
+    <div className="h-dvh w-full bg-dark relative select-none">
       <Swiper
         zoom={{ toggle: true }}
         loop
@@ -42,10 +42,10 @@ const Cover: FC<CoverProps> = (props) => {
         <p className="text-white font-light text-xs lg:text-sm text-center leading-6 font-montserrat">
           The Wedding of
         </p>
-        <h3 className="font-nunito text-white font-normal text-3xl font-alegreya mb-4 text-center">
+        <h3 className="text-white font-normal text-3xl font-alegreya mb-4 text-center">
           {props.name}
         </h3>
-        <p className="text-white font-light text-xs text-center leading-6 font-montserrat uppercase">
+        <p className="text-white font-light text-xs lg:text-sm text-center leading-6 font-montserrat">
           {props.place} | {props.date}
         </p>
         <button>
